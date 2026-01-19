@@ -1,0 +1,22 @@
+{
+  "Appearance": "Skeleton_Mage_Corruption_Orb",
+  "PitchAdjustShot": true,
+  "SticksVertically": true,
+  "MuzzleVelocity": 10,
+  "TerminalVelocity": 0,
+  "Damage": 14,
+  "DeathEffectsOnHit": true,
+  "TimeToLive": 3.1,
+  "DeadTimeMiss": 0,
+  "ImpactSlowdown": 0.1,
+  "DepthShot": 1,
+  "DeathParticles": {
+    "SystemId": "GreenOrbImpact"
+  },
+  "VerticalCenterShot": 0.1,
+  "HitParticles": {
+    "SystemId": "GreenOrbImpact"
+  },
+  "HorizontalCenterShot": -0.25,
+  "Bounciness": 1
+}
