@@ -4,4 +4,6 @@ items.Book_TomeOfNecromancy.description= An ancient book containing forbidden kn
 items.Tome_Of_Necromancy.name= Tome of Necromancy
 spell.SummonZombie.name= Summon Zombie
 spell.SummonZombie.description= Raises a zombie from the dead to fight for you. Costs 150 mana.
+spell.Arise.name= Arise
+spell.Arise.description= Summons a Skeleton Sand Soldier to patrol and fight for you.
 npcs.Skeleton_Sand_Warrior.name= Sand Warrior

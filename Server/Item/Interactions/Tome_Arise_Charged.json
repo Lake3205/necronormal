@@ -1,0 +1,68 @@
+{
+  "Type": "Simple",
+  "$Comment": "Arise - Summons Skeleton Sand Soldier Patrol at faced block",
+  "RunTime": 0.05,
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "Tome_Cast_Arise_StaminaCost",
+            "DefaultOk": true,
+            "DefaultValue": {
+              "Interactions": [
+                {
+                  "Type": "ChangeStat",
+                  "StatModifiers": {
+                    "Stamina": -8
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "Tome_Cast_Arise_StaminaRegenDelay",
+            "DefaultOk": true,
+            "DefaultValue": {
+              "Interactions": [
+                {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": -1.5
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "DefaultValue": {
+              "Interactions": [
+                "Tome_Arise_Effect"
+              ]
+            },
+            "Var": "Tome_Cast_Arise_Effect"
+          }
+        ]
+      }
+    ]
+  },
+  "Failed": {
+    "Type": "Simple",
+    "Effects": {
+      "ItemAnimationId": "Interact"
+    }
+  }
+}
