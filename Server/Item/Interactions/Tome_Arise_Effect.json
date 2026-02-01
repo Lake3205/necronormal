@@ -1,10 +1,10 @@
 {
   "Type": "Serial",
-  "$Comment": "Summon a Risen Knight at the player's location without consuming blocks",
+  "$Comment": "Summon a Sand Soldier at the player's location without consuming blocks",
   "Interactions": [
     {
       "Type": "SpawnNPC",
-      "EntityId": "Risen_Knight",
+      "EntityId": "Sand_Soldier2",
       "RelativeTo": "Self"
     },
     {
