@@ -1,0 +1,81 @@
+{
+  "Type": "Simple",
+  "$Comment": "Reanimate - Summons Risen Knight from nearby bone blocks",
+  "RunTime": 0.05,
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "Tome_Cast_Reanimate_StaminaCost",
+            "DefaultOk": true,
+            "DefaultValue": {
+              "Interactions": [
+                {
+                  "Type": "ChangeStat",
+                  "StatModifiers": {
+                    "Stamina": -10
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "Tome_Cast_Reanimate_StaminaRegenDelay",
+            "DefaultOk": true,
+            "DefaultValue": {
+              "Interactions": [
+                {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": -2.0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "DefaultValue": {
+              "Interactions": [
+                "Tome_Reanimate_Cost"
+              ]
+            },
+            "Var": "Tome_Cast_Reanimate_Cost"
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "DefaultValue": {
+              "Interactions": [
+                "Tome_Reanimate_Effect"
+              ]
+            },
+            "Var": "Tome_Cast_Reanimate_Effect"
+          }
+        ]
+      }
+    ]
+  },
+  "Failed": {
+    "Type": "Simple",
+    "Effects": {
+      "ItemAnimationId": "Interact"
+    }
+  }
+}

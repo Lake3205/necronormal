@@ -1,0 +1,7 @@
+{
+  "Type": "ChangeStat",
+  "$Comment": "Mana cost for Reanimate spell",
+  "StatModifiers": {
+    "Mana": -40
+  }
+}

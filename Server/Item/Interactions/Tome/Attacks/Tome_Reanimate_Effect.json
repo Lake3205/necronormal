@@ -1,0 +1,39 @@
+{
+  "Type": "RunOnBlockTypes",
+  "$Comment": "Find bone blocks nearby and spawn Risen Knights from them",
+  "BlockSets": [
+    "Necromancy_Bones"
+  ],
+  "MaxCount": 5,
+  "Range": 5,
+  "Interactions": {
+    "Interactions": [
+      {
+        "Type": "Serial",
+        "Interactions": [
+          {
+            "Type": "SpawnNPC",
+            "EntityId": "Risen_Knight"
+          },
+          {
+            "Type": "DestroyBlock"
+          }
+        ]
+      }
+    ]
+  },
+  "Next": {
+    "Type": "Simple",
+    "Effects": {
+      "ItemAnimationId": "CastHurlCharged",
+      "WorldSoundEventId": "SFX_Skeleton_Mage_Spellbook_Charge"
+    }
+  },
+  "Failed": {
+    "Type": "Simple",
+    "$Comment": "No bone blocks found nearby",
+    "Effects": {
+      "ItemAnimationId": "Interact"
+    }
+  }
+}
